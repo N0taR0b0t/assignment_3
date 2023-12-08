@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Devices</title>
+    <style>
+        body {
+            background-color: rgb(160, 160, 160);
+        }
+    </style>
+</head>
+<body><center>
+    <h1>Home Address: {{ home.address }}</h1>
+    <h2>Smart Devices:</h2>
+    {% for device in home.smart_devices %}
+        <li>Name: {{ device.name }}, Manufacturer: {{ device.manufacturer }}, Brightness: {{ device.brightness }}</li>
+    {% endfor %}
+</center></body>
+</html>
